@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questionnaire</title>
+  <!-- tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="container bg-neutral-100">
+  <header>
+    <h1 class="text-center text-4xl font-semibold mt-12 font-extrabold underline decoration-rose-900">Questionnaire</h1>
+  </header>
+  <!-- ------------------main---------------------- -->
+  <main>
+    <section class="container md:px-48 mx-auto mt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-1 gap-2 ">
+        <!-- 1 -->
+        <div class="m-4 bg-slate-200">
+          <div class="p-4 ">
+            <h3 class="font-extrabold">What is DOM and what is the purpose of DOM?</h3>
+            <p>DOM is an application programming interface, dom means, Document Object Model.Dom is like tree  because of its nodes by using dom we can create, change, or remove elements from a website document more efficiently.</p>
+          </div>
+        </div>
+        <!-- Jacket 2 card -->
+        <div class="m-4 bg-slate-200">
+          <div class="p-4 ">
+            <h3 class="font-extrabold">How will you select HTML elements using DOM? Name the DOM methods?</h3>
+            <p >We can select HTML elements using Dom in different ways. Those methods are: </p><br>
+                <p class="bg-amber-100 text-rose-800 font-medium">
+                > document.getElementsByTagName()<br>
+                > document.getElementsByClassName()<br>
+                > document.getElementById()<br>
+                > document.querySelector()<br>
+                > document.querySelectorAll()
+                </p>
+          </div>
+        </div>
+        <!-- Jacket 3 card -->
+        <div class="m-4 bg-slate-200">
+          <div class="p-4 ">
+            <h3 class="font-extrabold">What is event bubble?</h3>
+            <p>In HTML we can nest tags and have parent elements that can have multiple child elements.If we call a child it will check its parent node, at each stage it will check the parent node. Which feels like a bubble.</p>
+          </div>
+        </div>
+        <div class="m-4 bg-slate-200">
+          <div class="p-4 ">
+            <h3 class="font-extrabold">What is a callback function and why will you use it?</h3>
+            <p>A callback function is a function that is passed as a parameter to another function and called when a event happens</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="javascript:history.go(-1)">
+        <button class="bg-blue-600 py-2 px-8 mt-2 mx-4 md:mt-0 rounded-lg text-white font-bold" type="button">
+            Go Back
+        </button>
+    </a>
+    </section>
+  </main>
+</body>
+
+</html>

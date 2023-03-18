@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry</title>
+  <!-- tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://kit.fontawesome.com/7a7f68cef6.js" crossorigin="anonymous"></script> -->
+</head>
+  <body>
+    <header>
+        <section class="container px-4 md:px-56">
+          <div class="mx-auto px-3 md:px-48 mt-12 flex flex-col md:flex-row items-center justify-between bg-blue-300">
+            <div>
+              <h1 class="text-2xl md:text-4xl font-semibold">Interactive</h1>
+              <h6 class="text-2xl md:text-2xl">Geometry Genius</h6>
+            </div>
+            <div>
+              <button id="btn-blog" class="bg-blue-600 py-2 px-8 mt-2 md:mt-0 rounded-lg text-white font-bold">Blog</button>
+            </div>
+          </div>
+        </section>
+        
+      </header>
+    <main>
+          <section class="container md:px-48 mx-auto mt-12">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-2 text-center ">
+                <div onmouseover="changeColor(this)" id="triangle-color" class="my-4 p-4 bg-neutral-100">
+                <div class="p-4 flex justify-center">
+                  <img class="h-48 w-96" src="images/triangle.png" alt="">
+                </div>
+                <div>
+                  <h1 class="text-2xl font-semibold">Triangle</h1>
+                  <h3>Area(A) = 0.5 x b x h</h3> 
+                  <div class="flex justify-center items-center gap-3">
+                    <input id="triangle-base" class="w-16 text-center" type="text" placeholder="b">
+                    <h1>cm</h1>
+                    <input id="triangle-height" class="w-16 text-center" type="text" placeholder="h">
+                    <h1>cm</h1>
+                  </div>
+                </div>
+                <button id="btn-triangle" class="bg-blue-600 py-2 px-20 mt-2 rounded-lg text-white font-bold">Calculate</button>
+              </div>
+              <!-- card -->
+              <div onmouseover="changeColor(this)" id="rectangle-color" class="my-4 p-4 bg-neutral-100">
+                <div class="p-4 flex justify-center">
+                  <img class="h-48 w-96" src="images/rectangle.png" alt="">
+                </div>
+                <div>
+                  <h1 class="text-2xl font-semibold">Rectangle</h1>
+                  <h3>Area(A) =w x l</h3> 
+                  <div class="flex justify-center items-center gap-3">
+                    <input id="rectangle-width" class="w-16 text-center" type="text" placeholder="w">
+                    <h1>cm</h1>
+                    <input id="rectangle-length" class="w-16 text-center" type="text" placeholder="l">
+                    <h1>cm</h1>
+                  </div>
+                </div>
+                <button id="btn-rectangle" class="bg-blue-600 py-2 px-20 mt-2 rounded-lg text-white font-bold">Calculate</button>
+              </div>
+              <!-- card -->
+              <div onmouseover="changeColor(this)" id="parallelogram-color" class="my-4 p-4 bg-neutral-100">
+                <div class="p-4 flex justify-center">
+                  <img class="h-48 w-96" src="images/parallelogram.png" alt="">
+                </div>
+                <div>
+                  <h1 class="text-2xl font-semibold">Parallelogram</h1>
+                  <h3>Area(A) = b x h</h3> 
+                  <div class="flex justify-center items-center gap-3">
+                    <input id="parallelogram-base" class="w-16 text-center" type="text" placeholder="b">
+                    <h1>cm</h1>
+                    <input id="parallelogram-height" class="w-16 text-center" type="text" placeholder="h">
+                    <h1>cm</h1>
+                  </div>
+                </div>
+                <button id="btn-parallelogram" class="bg-blue-600 py-2 px-20 mt-2 rounded-lg text-white font-bold">Calculate</button>
+              </div>
+                 <div class="m-4 bg-neutral-100 w-96">
+                  <h3 class="font-semibold underline text-center">Area Calculation</h3>
+                  <table class="w-full">
+                    <tr>
+                      <td class="py-4 pr-4">1. Triangle</td>
+                      <td class="pr-4"><span id="triangle-value">00</span> cm&sup2</td>
+                      <td><button class="bg-blue-600 py-1 px-1 rounded-lg text-white font-medium">Convert to m&sup2</button></td>
+                    </tr>
+                    <tr>
+                      <td class="py-4 pr-4">2. Rectangle</td>
+                      <td class="pr-4"><span id="rectangle-value">00</span> cm&sup2</td>
+                      <td><button class="bg-blue-600 py-1 px-1 rounded-lg text-white font-medium">Convert to m&sup2</button></td>
+                    </tr>
+                    <tr>
+                      <td class="py-4 pr-4">3. Parallelogram</td>
+                      <td class="pr-4"><span id="parallelogram-value">00</span> cm&sup2</td>
+                      <td><button class="bg-blue-600 py-1 px-1 rounded-lg text-white font-medium">Convert to m&sup2</button></td>
+                    </tr>
+                    <tr>
+                      <td class="py-4 pr-4">4. Rhombus</td>
+                      <td class="pr-4"><span id="rhombus-value">00</span> cm&sup2</td>
+                      <td><button class="bg-blue-600 py-1 px-1 rounded-lg text-white font-medium">Convert to m&sup2</button></td>
+                    </tr>
+                    <tr>
+                      <td class="py-4 pr-4">5. Pentagon</td>
+                      <td class="pr-4"><span id="pentagon-value">00</span> cm&sup2</td>
+                      <td><button class="bg-blue-600 py-1 px-1 rounded-lg text-white font-medium">Convert to m&sup2</button></td>
+                    </tr>
+                    <tr>
+                      <td class="py-4 pr-4">6. Ellipse</td>
+                      <td class="pr-4"><span id="ellipse-value">00</span> cm&sup2</td>
+                      <td><button class="bg-blue-600 py-1 px-1 rounded-lg text-white font-medium">Convert to m&sup2</button></td>
+                    </tr>
+                    <tbody id="table">
+
+                    </tbody>
+                  </table>
+                </div>
+                </div>
+          </section>
+          <section class="container md:px-48 mx-auto mt-12">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-2 text-center ">
+              <div onmouseover="changeColor(this)" id="rhombus-color" class="my-4 p-4 bg-neutral-100">
+                <div class="p-4 flex justify-center">
+                  <img class="h-48 w-96" src="images/rhombus.png" alt="">
+                </div>
+                <div>
+                  <h1 class="text-2xl font-semibold">Rhombus</h1>
+                  <h3>Area(A)= 0.5 x d1 x d2</h3> 
+                  <div class="flex justify-center items-center gap-3">
+                    <div class="flex justify-center items-center">
+                        <h1>d1=</h1>
+                        <h1><span id="rhombus-base">16</span>cm</h1>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <h1>d1=</h1>
+                        <h1><span id="rhombus-height">16</span>cm</h1>
+                      </div>
+                  </div>
+                </div>
+                <button id="btn-rhombus" class="bg-blue-600 py-2 px-20 mt-2 rounded-lg text-white font-bold">Calculate</button>
+              </div>
+              <!-- card -->
+              <div onmouseover="changeColor(this)" id="pentagon-color" class="my-4 p-4 bg-neutral-100">
+                <div class="p-4 flex justify-center">
+                  <img class="h-48 w-96" src="images//pentagon.png" alt="">
+                </div>
+                <div>
+                  <h1 class="text-2xl font-semibold">Pentagon</h1>
+                  <h3>Area(A) =0.5 x p x b</h3> 
+                  <div class="flex justify-center items-center gap-3">
+                    <div class="flex justify-center items-center">
+                        <h1>p=</h1>
+                        <h1><span id="pentagon-base">6</span>cm</h1>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <h1>b=</h1>
+                        <h1><span id="pentagon-height">10</span>cm</h1>
+                      </div>
+                  </div>
+                </div>
+                <button id="btn-pentagon" class="bg-blue-600 py-2 px-20 mt-2 rounded-lg text-white font-bold">Calculate</button>
+              </div>
+              <!-- card -->
+              <div onmouseover="changeColor(this)" id="ellipse-color" class="my-4 p-4 bg-neutral-100">
+                <div class="p-4 flex justify-center">
+                  <img class="h-48 w-96" src="images/ellipse.png" alt="">
+                </div>
+                <div>
+                  <h1 class="text-2xl font-semibold">Ellipse</h1>
+                  <h3>Area(A) =πab</h3> 
+                  <div class="flex justify-center items-center gap-3">
+                    <div class="flex justify-center items-center">
+                        <h1>a=</h1>
+                        <h1><span id="ellipse-base">10</span>cm</h1>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <h1>b=</h1>
+                        <h1><span id="ellipse-height">4</span>cm</h1>
+                      </div>
+                  </div>
+                </div>
+                <button id="btn-ellipse" class="bg-blue-600 py-2 px-20 mt-2 rounded-lg text-white font-bold">Calculate</button>
+              </div>
+              
+            </div>
+          </section>
+        
+    </main>
+    <script src="js/common.js"></script>
+    <script src="js/click.js"></script>
+    <script src="js/card.js"></script>
+    
+  </body>
+</html>
